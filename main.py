@@ -37,16 +37,12 @@ class KeywordQueryEventListener(EventListener):
             if iconStyle == "black": optionIcon = "images/icon-black.png"
             if iconStyle == "white": optionIcon = "images/icon-white.png"
 
-            if i == 0: optionName = "Shutdown"
 
-            if i == 1: optionName = "Reboot"
-
-            if i == 2: optionName = "Suspend"
-
-            if i == 3: optionName = "Hibernate"
-
-            if i == 4: optionName = "Logout"
-
+            if i == 0: optionName = "Suspender"
+            if i == 1: optionName = "Reiniciar"
+            if i == 2: optionName = "Hibernar"
+            if i == 3: optionName = "Apagar"
+            if i == 4: optionName = "Cerrar Sesión"
 
             options.append(ExtensionResultItem(icon=optionIcon,
                                                     name=optionName,
@@ -64,10 +60,10 @@ class ExecuteSession(EventListener):
         option = data["option"]
 
 
-        if option == 0: command = "systemctl poweroff"
+        if option == 0: command = "systemctl suspend"
         if option == 1: command = "systemctl reboot"
-        if option == 2: command = "systemctl suspend"
-        if option == 3: command = "systemctl hibernate"
+        if option == 2: command = "systemctl hibernate"
+        if option == 3: command = "systemctl poweroff"
         if option == 4:
 
             desktopEnvironment = extension.preferences["desktop-environment"]
