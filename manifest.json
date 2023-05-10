@@ -1,8 +1,8 @@
 {
     "required_api_version": "^2.0.0",
-    "name": "Session Manager",
-    "description": "An extension that offers you session options",
-    "developer_name": "lighttigerXIV",
+    "name": "System Session Manager",
+    "description": "Una extensión que ofrece acceso a las opciones de apagado del sistema",
+    "developer_name": "trystan4861",
     "icon": "images/icon.png",
     "options": {
         "query_debounce": 0.05
@@ -11,8 +11,8 @@
         {
             "id": "kw",
             "type": "keyword",
-            "name": "Session Manager",
-            "default_value": "sm"
+            "name": "System Session Manager",
+            "default_value": "power"
         },
         {
             "id": "icon",
